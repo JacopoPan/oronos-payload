@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo "video recording starts"
+
+#SET MAX VIDEO DURATION IN MILLISECONDS (-t)
+sudo raspivid -o video-log.h264 -w 640 -h 480 -b 1000000 -t 5000 &

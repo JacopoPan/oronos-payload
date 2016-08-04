@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# start videorecording when vertically accelerated (set bitrate and max duration)
+# logs about 10MB/hour in data
+sudo python hat.py &
+
+# 200Hz requirement, logs about 75MB/hour
+python uThree-stream.py &
+
+#read from hat-log and send on CAN bus
+java -jar ./USBtinController.jar
